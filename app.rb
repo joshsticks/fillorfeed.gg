@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-  "Hello World!"
+  ENV["LOL_API_KEY"][0..2]
 end
