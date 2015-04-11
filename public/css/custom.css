@@ -41,14 +41,12 @@
 .jqm-custom .jqm-header .ui-btn {
 	width: 2em;
 	height: 2em;
-	background: none;
+	background-color: #9400D3;
 	border: 0;
 	top: 50%;
 	margin-top: -1em;
 	-webkit-border-radius: .3125em;
-	border-radius: .3125em;
-	opacity: .4;
-	filter: Alpha(Opacity=40);
+	border-radius: 50%;
 }
 
 /* Footer */
@@ -343,6 +341,12 @@
 .jqm-custom .jqm-content > h2.enemy-team {
 	color: red;
 	border-bottom: 1px solid red;
+	height: 55px;
+}
+
+.jqm-custom .jqm-content > h2.enemy-team > img {
+	float:right;
+	margin-top: -5px;
 }
  
 @media (min-width: 60em) {
