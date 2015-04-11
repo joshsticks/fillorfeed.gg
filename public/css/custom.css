@@ -6,6 +6,7 @@
 	border-top: 4px solid #9400D3;
 	border-bottom-color: #eee;
 }
+
 .jqm-custom .jqm-header h1 {
 	font-family: 'rock salt', sans-serif;
 	color: #9400D3;
@@ -57,9 +58,16 @@
 	padding-bottom: 0;
 }
 .jqm-custom .jqm-footer {
-	border-top: 1px solid #3eb249;
+	border-top: 1px solid #9400D3;
 }
 .jqm-custom .jqm-footer p {
+	font-size: .8em;
+	color: #999;
+	font-family: 'rock salt', sans-serif;
+	font-weight: 300;
+	margin: 0 1.25em 1.25em;
+}
+.jqm-custom .jqm-footer a {
 	font-size: .8em;
 	color: #999;
 	font-family: 'rock salt', sans-serif;

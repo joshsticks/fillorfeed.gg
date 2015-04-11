@@ -20,7 +20,9 @@
 				$.ajax({
 					url: "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+champ.get("id")+"?champData=all&api_key=e502b879-b576-4bbc-bc52-0f1f04ce7ee1",
 					success: function(response) {
-						$(".champion-list").append("<li class='champion'><a data-id='"+champ.get("id")+"' href='#champ'><img src='http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/"+response.image.full+"'/><p>"+response.name+"</p></a></li>");
+						champ.set("name", response.name);
+						champ.set("lore", response.lore);
+						$(".champion-list").append("<li class='champion' data-id='"+champ.get("id")+"'><a data-id='"+champ.get("id")+"' href='#champ'><img data-id='"+champ.get("id")+"' src='http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/"+response.image.full+"'/><p>"+response.name+"</p></a></li>");
 					}, 
 					error: function(response) {
 						console.log("error fetching individual details");
@@ -34,13 +36,15 @@
 		}
 	});
 
-	$("body").on("click", ".champion", function(event) {
-		selectedChamp = _.find(allChamps, function(champ){
+	$(document).on("click", ".champion", function(event) {
+		selectedChamp = _.find(allChamps.models, function(champ){
 			return $(event.target).data("id") == champ.id;
 		});
 	});
 
 	$(document).on( "pagebeforeshow", "#champ", function( event ) {
 		console.log(selectedChamp.get("id"));
+		$(".champion-header").text(selectedChamp.get("name"));
+		$(".lore").html(selectedChamp.get("lore"));
 	});
 })(jQuery);
