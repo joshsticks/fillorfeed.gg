@@ -3,27 +3,47 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>fillorfeed.gg</title>
 	<link rel="shortcut icon" href="../favicon.ico">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel='stylesheet'  href='http://fonts.googleapis.com/css?family=Rock+Salt:300,400,700'>
 	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
 	<link rel="stylesheet" href="../css/custom.css">
 	<script src="../js/jquery-1.11.2.min.js"></script>
-	<!-- <script src="../_assets/js/index.js"></script> -->
+	<script src="../js/underscore-min.js"></script>
+	<script src="../js/backbone-min.js"></script>
+	<script src="../js/app.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<div data-role="page" class="jqm-custom jqm-home" data-quicklinks="true">
-	<div data-role="header" class="jqm-header">
+<div id="home" data-role="page" class="jqm-custom jqm-home" data-quicklinks="true">
+	<div data-role="header" data-position="fixed" class="jqm-header">
 		<h1>FillorFeed</h1>
-		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
-		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+		<!-- <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a> -->
 	</div><!-- /header -->
 	<div role="main" class="ui-content jqm-content">
-		<h2>Champs</h2>
+		<h2>Champions</h2>
+		<ul class="champion-list">
+			
+		</ul>
 	</div><!-- /content -->
+	<!--  <div data-role="panel" id="main-nav" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+	    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+			<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Home</a></li>
+			<li data-filtertext="demos homepage" data-icon="home"><a href=".././champs">Champs</a></li>
+		</ul>
+	</div> --><!-- /panel -->
+</div><!-- /page -->
+<div data-role="page" id="champ" class="jqm-custom jqm-home" data-quicklinks="true">
+	<div  data-role="header" data-position="fixed" class="jqm-header">
+		<h1>FillorFeed</h1>
+		<a href="#home" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-carat-l ui-nodisc-icon ui-alt-icon ui-btn-left">Back</a>
+		<!-- <a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a> -->
+	</div><!-- /header -->
+	<div role="main" class="ui-content jqm-content">
+		<h2 class="champion-header"></h2>
+	</div>
 </div><!-- /page -->
 </body>
 </html>

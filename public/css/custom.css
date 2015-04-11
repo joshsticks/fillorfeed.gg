@@ -74,9 +74,16 @@
 }
 
 /* Content */
-.jqm-custom .jqm-content {
-	padding-top: 3em;
+.jqm-custom img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 }
+
+.jqm-custom .jqm-content > .champion-list {
+	padding: 1em;
+}
+
 .jqm-custom .jqm-content > h1,
 .jqm-custom .jqm-content > h2,
 .jqm-custom .jqm-content > h3,
@@ -93,7 +100,7 @@
 .jqm-custom .jqm-content > h2 {
 	color: #2C0BE0;
 	background-color: transparent;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #2C0BE0;
 	font-size: 1.6em;
 	padding-bottom: .2em;
 	margin: 0 0 .7375em;
@@ -111,6 +118,8 @@
 .jqm-custom .jqm-content > ul:not(.jqm-list) li {
 	font-size: 1.2em;
 	line-height: 1.5;
+	float: left;
+	margin: 1em;
 }
 .jqm-custom .jqm-content > p {
 	margin: 0 0 1.25em;
@@ -119,9 +128,7 @@
 .jqm-custom .jqm-content > ol {
 	padding-left: 1.3em;
 }
-.jqm-custom .jqm-content > .ui-listview {
-	padding-left: 0;
-}
+
 .jqm-custom .jqm-content > a,
 .jqm-custom .jqm-content > p a,
 .jqm-custom .jqm-content > ul:not(.jqm-list) li a {
@@ -283,6 +290,10 @@
     font-weight: 300;
 }
 
+.jqm-custom .jqm-content > ul li > .ui-btn {
+	background-color:black !important;
+}
+
 /* Quick links */
 .jqm-custom .jqm-content .jqm-deeplink {
 	display: block;
@@ -320,6 +331,12 @@
 	color: #fff;
 }
 
+/* Enemy Team Colorings */
+.jqm-custom .jqm-content > h2.enemy-team {
+	color: red;
+	border-bottom: 1px solid red;
+}
+ 
 @media (min-width: 60em) {
 	.jqm-custom .jqm-header h2 {
 		padding: 1em 0 .7em;
@@ -338,9 +355,7 @@
 		font-size: 1.2em;
 		margin-top: -.625em;
 	}
-	.jqm-custom .jqm-navmenu-link {
-		display: none;
-	}
+	
 	.jqm-custom .jqm-search-link {
 		right: 3%;
 	}
